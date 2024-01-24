@@ -1,3 +1,4 @@
+
 public class Main {
     public static void main(String[] args) {
         byte a = 5;
@@ -40,19 +41,22 @@ public class Main {
         byte bottles = 16;
         byte time = 2;
         int bottlesTime1 = bottles / time;
-        byte time2 = 20;
-        short time3 = 1440;
-        short time4 = 4320;
-        int time5 = 44640;
-        int bottlesTime2 = bottlesTime1 * time2;
-        int bottlesTime3 = bottlesTime1 * time3;
-        int bottlesTime4 = bottlesTime1 * time4;
-        int bottlesTime5 = bottlesTime1 * time5;
+        byte time1 = 20;
+        byte inMonthOfDay = 31;
+        byte hoursInDay = 24;
+        byte minutesInHour = 60;
+        int time2 = hoursInDay * minutesInHour;
+        int time3 = (hoursInDay * 3) * minutesInHour;
+        int time4 = (inMonthOfDay * hoursInDay) * minutesInHour;
+        int timeOne = bottlesTime1 * time1;
+        int timeTwo = bottlesTime1 * time2;
+        int timeThree = bottlesTime1 * time3;
+        int timeFour = bottlesTime1 * time4;
         System.out.println("За 1 минуту машина произвела " + bottlesTime1 + " бутылок");
-        System.out.println("За 20 минут машина произвела " + bottlesTime2 + " бутылок");
-        System.out.println("За 1440 минут машина произвела " + bottlesTime3 + " бутылок");
-        System.out.println("За 4320 минут машина произвела " + bottlesTime4 + " бутылок");
-        System.out.println("За 44640 минут машина произвела " + bottlesTime5 + " бутылок");
+        System.out.println("За 20 минут машина произвела " + timeOne + " бутылок");
+        System.out.println("За сутки машина произвела " + timeTwo + " бутылок");
+        System.out.println("За трое суток машина произвела " + timeThree + " бутылок");
+        System.out.println("За месяц машина произвела " + timeFour + " бутылок");
 
         byte cansPurchased = 120;
         byte white = 2;
@@ -94,16 +98,16 @@ public class Main {
         int masha = 67760;
         int denis = 83690;
         int kristina = 76230;
-        long cashMasha = (masha / 100) * 10;
-        long cashDenis = (denis / 100) * 10;
-        long cashKristina = (kristina / 100) * 10;
-        long newCashMasha = masha + cashMasha;
-        long newCashDenis = denis + cashDenis;
-        long newCashKristina = kristina + cashKristina;
+        long tenPercentMasha = (long) (masha * 0.10);
+        long tenPercentDenis = (long) (denis * 0.10);
+        long tenPercentKristina = (long) (kristina * 0.10);
+        long newCashMasha =  masha + tenPercentMasha;
+        long newCashDenis = denis + tenPercentDenis;
+        long newCashKristina = kristina + tenPercentKristina;
         long cashYearMasha = masha * 12;
         long cashYearDenis = denis * 12;
         long cashYearKristina = kristina * 12;
-        long newCashYearMasha = newCashMasha * 12;
+        long newCashYearMasha =  newCashMasha * 12;
         long newCashYearDenis = newCashDenis * 12;
         long newCashYearKristina = newCashKristina * 12;
         long differenceMasha = newCashYearMasha - cashYearMasha;
@@ -112,6 +116,7 @@ public class Main {
         System.out.println("Маша теперь получает " + newCashMasha + " рублей. Годовой доход вырос на " + differenceMasha + " рублей");
         System.out.println("Денис теперь получает " + newCashDenis + " рублей. Годовой доход вырос на " + differenceDenis + " рублей");
         System.out.println("Крестина теперь получает " + newCashKristina + " рублей. Годовой доход вырос на " + differenceKristina + " рублей");
+
 
 
 
